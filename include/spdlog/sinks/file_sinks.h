@@ -251,5 +251,8 @@ private:
 using daily_file_sink_mt = daily_file_sink<std::mutex>;
 using daily_file_sink_st = daily_file_sink<details::null_mutex>;
 
+using dateonly_daily_file_sink_mt = daily_file_sink<std::mutex, dateonly_daily_file_name_calculator >;
+using dateonly_daily_file_sink_st = daily_file_sink<details::null_mutex, dateonly_daily_file_name_calculator>;
+
 } // namespace sinks
 } // namespace spdlog
